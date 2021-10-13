@@ -1,0 +1,169 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>
+    {% block title %}
+    Welcome to John's world!
+    {% endblock %}
+</title>
+<meta name="keywords" content=" ">
+<meta name="description" content="{% block meta_description %}
+    John's personal website
+{% endblock %}">
+<meta name="author" content="">
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="{% static 'website/css/bootstrap.min.css'%}">
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css'%}">
+<!-- Responsive-->
+<link rel="stylesheet" href="{% static 'website/css/responsive.css'%}">
+<!-- fevicon -->
+<link rel="icon" href="{% static 'website/images/fevicon.png'%}" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="{% static 'website/css/jquery.mCustomScrollbar.min.css'%}">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- owl stylesheets -->
+<link rel="stylesheet" href="{% static 'website/css/owl.carousel.min.css'%}">
+<link rel="stylesheet" href="{% static 'website/css/owl.theme.default.min.css'%}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+</head>
+<body>
+	<!--header section start <img src="..." class="rounded-pill" alt="...">-->
+    <div class="header_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo"><a href="home.html"><img src="{% static 'website/images/20211011_194957.png'%}"></a> </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="menu_text">
+                        <ul>
+                            <li><a href="{% url 'home' %} ">HOME</a></li>
+                            <li><a href="{% url 'about' %}">ABOUT</a></li>
+                            <li><a href="{% url 'engineering' %}">E.E</a></li>
+                            <li><a href="{% url 'web' %}">WEB DESIGN</a></li>
+                            <li><a href="{% url 'dj' %}">DJ MIX</a></li>
+                            <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+
+
+                    </div>
+                            <span  style="font-size:33px;cursor:pointer; color: #ffffff;" onclick="openNav()"><img src="" class="toggle_menu"></span>
+                     </div>
+                </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header section end -->
+
+
+{% block content %}
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+ <!-- footer section start -->
+    <div class="footer_section layout_padding">
+        <div class="footer_section_2">
+    	    <div class="container">
+    		    <div class="row map_address">
+    		    	<div class="col-sm-12 col-lg-4">
+    		    		<div class="map_text"><img src="{% static 'website/images/map-icon.png'%}"><span class="map_icon">No.20 Street P, Phase One Gwagwalada Abuja</span></div>
+    		    	</div>
+                    <div class="col-sm-12 col-lg-4">
+                    	<div class="map_text"><img src="{% static 'website/images/phone-icon.png'%}"><span class="map_icon">( 08117459091 )</span></div>
+                    </div>
+    		    	<div class="col-sm-12 col-lg-4">
+    		    		<div class="map_text"><img src="{% static 'website/images/email-icon.png'%}"><span class="map_icon">johnibeh55.ji@gmail.com</span></div>
+    		    	</div>
+    		    </div>
+    		    <div class="social_icon">
+    		    	<ul>
+    		    		<li><a href="https://m.facebook.com/john.ibeh.566?ref=bookmarks"><img src="{% static 'website/images/fb-icon.png'%}"></a></li>
+    		    		<li><a href="https://twitter.com/Sugar_boi_?s=09"><img src="{% static 'website/images/twitter-icon.png'%}"></a></li>
+
+    		    		<li><a href="https://www.instagram.com/sugar_boi_zoe?r=nametag"><img src="{% static 'website/images/instagram-icon.png'%}"></a></li>
+    		    	</ul>
+    		    </div>
+    		    <p class="copyright_text">Copyright 2021 All Right Reserved By Shuga<a href="h"></p>
+    	    </div>
+                    </br>
+                    </br>
+                    </br>
+                    </br> </br>
+        </div>
+    </div>
+    <!-- footer section end -->
+
+
+
+
+
+
+    <!-- Javascript files-->
+    <script src="{% static 'website/js/jquery.min.js'%}"></script>
+    <script src="{% static 'website/js/popper.min.js'%}"></script>
+    <script src="{% static 'website/js/bootstrap.bundle.min.js'%}"></script>
+      <script src="{% static 'website/js/jquery-3.0.0.min.js'%}"></script>
+      <script src="{% static 'website/js/plugin.js'%}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'website/js/jquery.mCustomScrollbar.concat.min.js'%}"></script>
+      <script src="{% static 'website/js/custom.js'%}"></script>
+      <!-- javascript -->
+      <script src="{% static 'website/js/owl.carousel.js'%}"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+      $(document).ready(function(){
+      $(".fancybox").fancybox({
+         openEffect: "none",
+         closeEffect: "none"
+         });
+
+         $(".zoom").hover(function(){
+
+         $(this).addClass('transition');
+         }, function(){
+
+         $(this).removeClass('transition');
+         });
+         });
+         </script>
+
+
+   <script>
+    function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+   document.getElementById("myNav").style.width = "0%";
+   }
+</script>
+
+</html>
+
+
+</body>

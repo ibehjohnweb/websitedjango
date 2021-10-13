@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block title %}
+
+        DJ MIX TAPES!
+
+    {% endblock %}
+
+    {% block meta_description %}
+
+       Dj Shuga old school mix tape
+
+    {% endblock %}
+
+{% block content %}
+
+
+
+
+     <!-- our service section start -->
+    <div class="our_section layout_padding">
+    	<div class="container">
+    		<h1 class="our_text"><strong>DJ SERVICE</strong></h1>
+    		<p class="client_long_text"> Our services are cool and affordable</p>
+    		<div class="row padding_top_0">
+    			<div class="col-lg-4">
+    				<div class="image_7"><a href="{% url 'contact' %}"><img src="{% static 'website/images/Dj3.png'%}"></a></div>
+    				<h2 class="design_text">DJ PHOTOS</h2>
+    				<p class="fact_text">Permit us to spice your event</p>
+    			</div>
+    		    <div class="col-lg-4">
+    		    	<div class="image_7"><a href="{% url 'contact' %}"><img src="{% static 'website/images/Dj1.png'%}"></a></div>
+    				<h2 class="design_text">DJ MIXTAPES</h2>
+    				<p class="fact_text">Music brings back memories </p>
+    		    </div>
+    		    <div class="col-lg-4">
+    		    	<div class="image_7"><a href="{% url 'contact' %}"><img src="{% static 'website/images/Dj2.png'%}"></a></div>
+    				<h2 class="design_text">DJ VIDEOS</h2>
+    				<p class="fact_text">We are at your service any day anytime, contact us today!</p>
+    		    </div>
+    		    <div class="bt_main">
+    		    	<div class="seemore_bt"><a href="{% url 'bookings' %}">Bookings</a></div>
+    		    </div>
+    		</div>
+
+    	</div>
+    </div>
+    <!-- our service section end -->
+
+{% endblock %}

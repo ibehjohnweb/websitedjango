@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block title %}
+
+        Book John Services!
+
+    {% endblock %}
+
+    {% block meta_description %}
+
+       Ibeh John Services!
+
+    {% endblock %}
+
+{% block content %}
+
+
+    <!-- contact section start -->
+<br/>
+<br/>
+<br/><br/>
+
+ {% if name %}
+<br/>
+<br/>
+
+             <center>
+                    <h3>
+                        Thank you {{ name }} for booking us
+                    </h3>
+
+                    <p>
+                        We received your email and will respond to you shortly...
+                    </p>
+
+            </center>
+            <br/> <br/>
+        <center>
+            <h1> Review Your Information; </h1>
+
+            <strong> Your Name: </strong>{{ name  }}<br/>
+              <strong> Your Email: </strong>{{ email }}<br/>
+              <strong> Your Phone Number: </strong>{{ number }}<br/>
+              <strong> Service in Need: </strong>{{ services}}<br/>
+                <strong> Address: </strong>{{ address}}<br/>
+              <strong> Your Message: </strong>{{ message }}<br/>
+
+        </center>
+
+            {% else %}
+
+
+         <h1 class="contact_text_2"><strong>BOOK US   </strong></h1>
+            <p class="client_long_text">We respond as soon as you drop your request</p>
+    <div class="contact_section ">
+        <div class="row">
+            <!--class="col-sm-12 col-lg-4"> -->
+            <div class="container">
+                <div class="col-sm-12 background_bg">
+                    <div class="contact_bg">
+                        <div class="input_main">
+                           <div class="container">
+                            <h2 class="request_text">BOOK US! </h2>
+                                   <form  action="{% url 'bookings' %}" method="post"  class="tm-contact-form">
+                                       {% csrf_token %}
+                                   <div class="form-group">
+                                          <input type="text" name="contact_name" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Your Name" required="">
+                                        </div>
+                                           <div class="form-group">
+                                          <input type="email" name="contact_email" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Your Email Address" required="">
+                                        </div>
+                                           <div class="form-group">
+                                          <input type="text" name="contact_number" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Your Phone Number" required="">
+                                        </div>
+                                                                                    <div class="form-group">
+
+                                                                                                    <input type="text" name="contact_services" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="fill in either (Web Designer/Electrical Services/Event Dj)" required="">
+                                                                                     </div>
+
+                                           <div class="form-group">
+                                          <input type="text" name="contact_address" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Enter Your Address" required="">
+                                        </div>
+                                        <div class="form-group">
+                                          <textarea rows="4" name="contact_message" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Message..." required=""></textarea>
+                                        </div>
+
+                                        <div class="form-group mb-0">
+                                          <button type="submit" class="btn rounded-0 d-block ml-auto tm-btn-primary">
+                                            Submit Your Request
+                                          </button>
+                                        </div>
+                                      </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+{% endif %}
+<br/><br/><br/>
+{% endblock %}

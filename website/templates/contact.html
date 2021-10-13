@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block title %}
+
+        Contact John!
+
+    {% endblock %}
+
+    {% block meta_description %}
+
+       Contact Ibeh John!
+
+    {% endblock %}
+
+{% block content %}
+
+    <!-- contact section start -->
+
+    <div class="about_section_2 layout_padding">
+        <div class="container">
+
+
+            {% if name %}
+             <center>
+                    <h3>
+                        Thank you {{ name }} for contacting us
+                    </h3>
+
+                    <p>
+                        We received your email and will respond to you shortly. Kindly follow us on all platform right below this comment...
+                    </p>
+
+            </center>
+            <br/> <br/>
+
+            {% else %}
+            <h1 class="contact_text_2"><strong>CONTACT US   </strong></h1>
+            <p class="client_long_text">We respond as soon as you drop your request</p>
+        </div>
+    </div>
+    <div class="contact_section ">
+        <div class="row">
+            <div class="col-md-6 background_bg">
+                <div class="contact_bg">
+                    <div class="input_main">
+                       <div class="container">
+                        <h2 class="request_text">REQUEST A CALL BACK  </h2>
+                                   <form  action="{% url 'contact' %}" method="post"  class="tm-contact-form">
+                                       {% csrf_token %}
+                                    <div class="form-group">
+                                      <input type="text"  name="contact_name" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Your Name" required="" />
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="email"  name="contact_email" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Your Email" required="" />
+                                    </div>
+
+                                    <div class="form-group">
+                                      <textarea rows="4"  name="contact_message" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Message..." required=""></textarea>
+                                    </div>
+
+                                    <div class="form-group mb-0">
+                                      <button type="submit" class="btn rounded-0 d-block ml-auto tm-btn-primary">
+                                        Send It Now
+                                      </button>
+                                    </div>
+                                  </form>
+                       </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39726.181947496414!2d7.05682009811578!3d8.941092492246097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e87e150f867e7%3A0x21d8ed724151c62c!2s902101%2C%20Gwagwalada!5e0!3m2!1sen!2sng!4v1633949368158!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!-- contact section end -->
+
+
+{% endblock %}
