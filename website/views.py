@@ -92,3 +92,15 @@ def engineering(request):
 def web(request):
     return render(request, 'web.html', {})
 
+
+def eeservices(request):
+    return render(request, 'eeservices.html', {})
+
+
+
+def djservices(request):
+    return render(request, 'djservices.html', {})
+
+
+def webservices(request):
+    return render(request, 'webservices.html', {})
