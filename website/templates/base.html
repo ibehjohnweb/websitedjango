@@ -56,7 +56,21 @@
                             <li><a href="{% url 'web' %}">WEB DESIGN</a></li>
                             <li><a href="{% url 'dj' %}">DJ MIX</a></li>
                             <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+                           <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                  <a href="{% url 'home' %} ">HOME</a>
+                  <a href="{% url 'about' %}">ABOUT</a>
+                  <a href="{% url 'engineering' %}">E.E</a>
+                  <a href="{% url 'web' %}">WEB DESIGN</a>
+                  <a href="{% url 'dj' %}">DJ MIX</a>
+                  <a href="{% url 'contact' %}">CONTACT US</a>
+                    <a href="{% url 'bookings' %}">FOR BOOKINGS</a>
 
+                </div>
+                </div>
+                <span  style="font-size:33px;cursor:pointer; color: #ffffff;" onclick="openNav()"><img src="{% static 'website/images/toggle.png'%}" class="toggle_menu"></span>
+                </div>
 
                     </div>
                             <span  style="font-size:33px;cursor:pointer; color: #ffffff;" onclick="openNav()"><img src="" class="toggle_menu"></span>
