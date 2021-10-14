@@ -11,9 +11,10 @@ urlpatterns = [
     path('bookings.html', views.bookings, name='bookings'),
     path('ee.html', views.engineering, name='engineering'),
     path('web.html', views.web, name='web'),
-    path('djservices.html', views.web, name='djservices'),
-    path('eeservices.html', views.web, name='eeservices'),
-    path('webservices.html', views.web, name='webservices'),
+    path('eeservices.html', views.eeservices, name='eeservices'),
+    path('djservicss.html', views.djservices, name='djservices'),
+    path('webservices.html', views.webservices, name='webservices'),
+
 ]
 
 

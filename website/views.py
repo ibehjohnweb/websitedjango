@@ -11,6 +11,18 @@ from django.core.mail import send_mail
 def home(request):
     return render(request, 'home.html', {})
 
+
+def eeservices(request):
+    return render(request, 'eeservices.html', {})
+
+
+def djservices(request):
+    return render(request, 'djservices.html', {})
+
+
+def webservices(request):
+    return render(request, 'webservices.html', {})
+
 def contact(request):
     if request.method == "POST":
         name = request.POST['contact_name']
@@ -93,14 +105,6 @@ def web(request):
     return render(request, 'web.html', {})
 
 
-def eeservices(request):
-    return render(request, 'eeservices.html', {})
 
 
 
-def djservices(request):
-    return render(request, 'djservices.html', {})
-
-
-def webservices(request):
-    return render(request, 'webservices.html', {})
